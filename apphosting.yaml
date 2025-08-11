@@ -1,0 +1,22 @@
+# Settings to manage and configure a Firebase App Hosting backend.
+# https://firebase.google.com/docs/app-hosting/configure
+
+# The location of the backend.
+# https://firebase.google.com/docs/app-hosting/locations
+location: us-central1
+
+# Public environment variables for the build and runtime.
+# https://firebase.google.com/docs/app-hosting/configure-backend#public-environment-variables
+env:
+  - variable: NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY
+    value: "pk_live_51RqYX9RxrZA2tZqoGoJNRvUha7wtpZi4vNI51pRSGEjILOu0tdcpPzLwiqA3SFlRap0it2rEY4l9V5VVh7gpaHun00MsyjmRLI"
+  - variable: NEXT_PUBLIC_STRIPE_PRICE_ID
+    value: "price_1RqZIcRxrZA2tZqoVayqtQWD"
+
+# Secret environment variables for the runtime.
+# https://firebase.google.com/docs/app-hosting/configure-backend#secret-environment-variables
+secretEnv:
+  - variable: STRIPE_API_KEY
+    secret: "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"
+  - variable: STRIPE_WEBHOOK_SECRET
+    secret: "whsec_RLzx1zW75gibycpOqmuUpdCLDMohN3uZ"
